@@ -3,6 +3,7 @@ package com.example.organizaiapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -32,7 +33,7 @@ public class IntroActivity extends AppCompatActivity {
         clickCount++;
 
         //busca pela textview que iremos alterar
-        TextView viewById = findViewById(R.id.txt_intro);
+        TextView viewById = findViewById(R.id.txt_pergunta);
 
         //condicional para lidar com cada um dos clicks
         switch (clickCount){
@@ -43,10 +44,22 @@ public class IntroActivity extends AppCompatActivity {
                 viewById.setText("Com apenas algumas perguntas, vamos elaborar sugestões personalizadas para você.");
             break;
             case 3:
-                Intent i = new Intent(this, MainActivity.class);
+                viewById.setText("Gostaria de montar seu perfil de usuário?");
+                findViewById(R.id.btn_pular_perguntas).setVisibility(View.VISIBLE);
+                Button btnProximo = (Button) view;
+                btnProximo.setText("Sim");
+                break;
+            case 4:
+                Intent i = new Intent(this, PerguntasActivity.class);
                 startActivity(i);
                 finish();
                 break;
         }
+    }
+
+    public void handlePularPerguntas(View view) {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
     }
 }

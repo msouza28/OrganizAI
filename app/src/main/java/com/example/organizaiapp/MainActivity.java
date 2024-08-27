@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -27,7 +26,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.transition.TransitionManager;
 
-import com.example.organizaiapp.domain.Registro;
+import com.example.organizaiapp.domain.CategoriaCard;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -97,31 +96,27 @@ public class MainActivity extends AppCompatActivity {
         TextView txtRegistroVazio = findViewById(R.id.txt_registro_vazio);
 
         //Esses dados vao vir da base
-        List<Registro> registros = new ArrayList<Registro>();
-        registros.add(new Registro("Viagem", "Fim de semana em Ubatuba", 700.50, 0));
-        registros.add(new Registro("Carroo", "Fim de semana em Ubatuba", 230.00, 0));
-        registros.add(new Registro("Viagem", "Fim de semana em Ubatuba", 700.50, 0));
-        registros.add(new Registro("Carrooooo", "Lanterna traseira", 230.00, 0));
-        registros.add(new Registro("Viagem", "Fim de semana em Ubatuba", 700.50, 0));
-        registros.add(new Registro("Carro", "Lanterna traseira", 230.00, 0));
-        registros.add(new Registro("Viagem", "Fim de semana em Ubatuba", 700.50, 0));
+        List<CategoriaCard> registros = new ArrayList<CategoriaCard>();
+        registros.add(new CategoriaCard("Viagem", 1500.0));
+        registros.add(new CategoriaCard("Mercado", 700.0));
+        registros.add(new CategoriaCard("Lazer", 400.0));
+        registros.add(new CategoriaCard("Carro", 100.0));
+        registros.add(new CategoriaCard("Mercado", 700.0));
+        registros.add(new CategoriaCard("Lazer", 400.0));
+        registros.add(new CategoriaCard("Carro", 100.0));
+
 
         if (!registros.isEmpty()){
             txtRegistroVazio.setVisibility(View.INVISIBLE);
             verticalScrollView.setVisibility(View.VISIBLE);
-            for (Registro registro : registros){
+            for (CategoriaCard registro : registros){
                 LayoutInflater inflater = LayoutInflater.from(this);
-                LinearLayout card = (LinearLayout) inflater.inflate(R.layout.registro_card, linearRegistros, false);
+                LinearLayout card = (LinearLayout) inflater.inflate(R.layout.categoria_card, linearRegistros, false);
 
-                ImageView iconCategoria = card.findViewById(R.id.icon_categoria);
-                TextView nomeCategoria = card.findViewById(R.id.nome_categoria);
-                TextView descricaoGasto = card.findViewById(R.id.descricao_gasto);
-                TextView valorGasto = card.findViewById(R.id.valor_gasto);
+                TextView nomeCategoria = card.findViewById(R.id.categoria_nome_categoria);
+                TextView valorGasto = card.findViewById(R.id.categoria_valor_gasto);
 
                 nomeCategoria.setText(registro.getCategoria());
-
-                // Defina a descrição e o valor do gasto
-                descricaoGasto.setText(registro.getDescricao());
                 valorGasto.setText("R$ " + registro.getValor());
 
                 // Adicione o card ao LinearLayout

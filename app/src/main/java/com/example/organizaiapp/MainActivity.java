@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                     selectedTextView[0].setBackground(null); // Remove o background ou substitua por outro estilo
                     selectedTextView[0].setTextColor(Color.BLACK); // Restaura a cor do texto original
                 }
-
                 // Define o novo TextView como selecionado
                 textView.setBackground(connersRounded);
                 textView.setTextColor(Color.WHITE);
@@ -99,13 +98,13 @@ public class MainActivity extends AppCompatActivity {
 
         //Esses dados vao vir da base
         List<Registro> registros = new ArrayList<Registro>();
-        registros.add(new Registro("Vaigem", "Fim de semana em Ubatuba", 700.50, 0));
+        registros.add(new Registro("Viagem", "Fim de semana em Ubatuba", 700.50, 0));
+        registros.add(new Registro("Carroo", "Fim de semana em Ubatuba", 230.00, 0));
+        registros.add(new Registro("Viagem", "Fim de semana em Ubatuba", 700.50, 0));
+        registros.add(new Registro("Carrooooo", "Lanterna traseira", 230.00, 0));
+        registros.add(new Registro("Viagem", "Fim de semana em Ubatuba", 700.50, 0));
         registros.add(new Registro("Carro", "Lanterna traseira", 230.00, 0));
-        registros.add(new Registro("Vaigem", "Fim de semana em Ubatuba", 700.50, 0));
-        registros.add(new Registro("Carro", "Lanterna traseira", 230.00, 0));
-        registros.add(new Registro("Vaigem", "Fim de semana em Ubatuba", 700.50, 0));
-        registros.add(new Registro("Carro", "Lanterna traseira", 230.00, 0));
-        registros.add(new Registro("Vaigem", "Fim de semana em Ubatuba", 700.50, 0));
+        registros.add(new Registro("Viagem", "Fim de semana em Ubatuba", 700.50, 0));
 
         if (!registros.isEmpty()){
             txtRegistroVazio.setVisibility(View.INVISIBLE);

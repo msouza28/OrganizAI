@@ -1,7 +1,10 @@
 package com.example.organizaiapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +16,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -22,8 +26,6 @@ import com.blackcat.currencyedittext.CurrencyEditText;
 public class PerguntasActivity extends AppCompatActivity {
 
     private int clickCount = 0;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,4 +136,6 @@ public class PerguntasActivity extends AppCompatActivity {
         findViewById(R.id.btn_sim_rural).setVisibility(View.INVISIBLE);
         handleProximaPergunta(new View(this));
     }
+
+
 }

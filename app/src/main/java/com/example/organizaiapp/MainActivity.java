@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             textView.setId(i < 12 ? (anoAtual * 100 + i + 1) : ((anoAtual + 1) * 100 + (i - 11))); // Gera um ID automático
             textView.setTag(meses[i]); // Armazena o nome do mês como uma tag
             textView.setText(meses[i]);
-            textView.setTextSize(18);
+            textView.setTextSize(16);
             textView.setPadding(35, 0, 35, 0);
             textView.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
             textView.setTypeface(typeface, Typeface.BOLD);

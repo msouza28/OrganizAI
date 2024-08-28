@@ -33,8 +33,8 @@
 
         <ImageView
             android:id="@+id/btn_info"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.245"
@@ -44,8 +44,8 @@
 
         <ImageView
             android:id="@+id/btn_olho_aberto"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/foto_usuario"
@@ -54,8 +54,8 @@
 
         <ImageView
             android:id="@+id/btn_config"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btn_info"
@@ -108,7 +108,7 @@
 
         <Button
             android:id="@+id/btn_meus_beneficios"
-            android:layout_width="170dp"
+            android:layout_width="180dp"
             android:layout_height="45dp"
             android:backgroundTint="@color/verdeForte"
             android:text="Meus benefícios"
@@ -116,6 +116,8 @@
             android:textColor="@color/brancoVerde"
             android:textSize="15sp"
             android:textStyle="bold"
+            android:gravity="center"
+            app:cornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/banner_beneficios"
             app:layout_constraintEnd_toEndOf="@+id/banner_beneficios"
             app:layout_constraintHorizontal_bias="0.2"
@@ -140,7 +142,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/balanco_constraint"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="270dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,12 +163,12 @@
         <TextView
             android:id="@+id/txt_balanco_titulo"
             android:layout_width="250dp"
-            android:layout_height="45dp"
+            android:layout_height="35dp"
             android:fontFamily="@font/saira"
             android:text="Balanço Mensal"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/bg_balanco"
             app:layout_constraintEnd_toEndOf="parent"
@@ -177,12 +179,12 @@
         <TextView
             android:id="@+id/txt_numBalanco"
             android:layout_width="250dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:fontFamily="@font/saira"
             android:text="R$ 500,00"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bg_balanco"
@@ -193,12 +195,15 @@
 
         <View
             android:id="@+id/bg_selected"
-            android:layout_width="180dp"
-            android:layout_height="80dp"
+            android:layout_width="120dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="43dp"
             android:background="@drawable/banner_conners_rounded"
             android:backgroundTint="@color/verdeForte"
+            android:foregroundGravity="center_horizontal"
             app:layout_constraintBottom_toBottomOf="@+id/txt_receita_titulo"
             app:layout_constraintEnd_toEndOf="@+id/txt_receita_titulo"
+            app:layout_constraintHorizontal_bias="0.58"
             app:layout_constraintStart_toStartOf="@+id/txt_receita_titulo"
             app:layout_constraintTop_toTopOf="@+id/txt_receita_titulo"
             app:layout_constraintVertical_bias="0.19999999" />
@@ -211,7 +216,7 @@
             android:text="Receitas"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bg_balanco"
@@ -229,7 +234,7 @@
             android:text="R$ 300,00"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -244,7 +249,7 @@
             android:text="Despesas"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bg_balanco"
@@ -262,7 +267,7 @@
             android:text="R$ 200,00"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -274,7 +279,7 @@
         android:id="@+id/registros_constraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="430dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -296,6 +301,7 @@
 
             <LinearLayout
                 android:id="@+id/linear_meses"
+                android:layout_marginHorizontal="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -304,16 +310,15 @@
 
         <ScrollView
             android:id="@+id/vertical_scroll_view"
-            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
             android:fillViewport="true"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll_view"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_scroll_view">
 
             <LinearLayout
                 android:id="@+id/linear_registros"
@@ -326,8 +331,8 @@
             android:id="@+id/txt_registro_vazio"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:gravity="center"
             android:fontFamily="@font/saira"
+            android:gravity="center"
             android:text="Não há registros para esse mês"
             android:textAlignment="center"
             android:textColor="@color/black"

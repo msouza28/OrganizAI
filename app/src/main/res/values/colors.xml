@@ -8,4 +8,6 @@
     <color name="buttonDisable">#9EC19E</color>
     <color name="txtDisable">#717171</color>
     <color name="vermelhoCancel">#FAC9C9</color>
+    <color name="verdeMenu">#A6DB66</color>
+    <color name="vermelhoEncerrar">#FFAFAF</color>
 </resources>

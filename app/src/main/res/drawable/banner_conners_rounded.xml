@@ -1,4 +1,4 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/principal"/> <!-- Cor de fundo da View -->
-    <corners android:radius="16dp"/>
+    <solid android:color="@color/verdeMenu"/> <!-- Cor de fundo do Menu -->
+    <corners android:radius="20dp"/>
 </shape>

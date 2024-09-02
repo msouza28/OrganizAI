@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name" translatable="false">OrganizaiApp</string>
     <string name="nome_app">OrganizAI</string>
+    <string name="Bom_Dia"> Bom dia, Meu amigo!</string>
+    <string name="Minha_conta"> MINHAS CONTAS</string>
+    <string name="Saldo"> SALDO ATUAL  R$: 13.000,00</string>
+    <string name="Contas"> CONTAS CADASTRADAS </string>
+    <string name="Nome_da_Conta"> Nome Banco </string>
+    <string name="Saldo_da_Conta"> Saldo Atual </string>
+    <string name="Valor_da_Conta"> R$ 3.000,00 </string>
 </resources>

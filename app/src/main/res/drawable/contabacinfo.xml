@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/rounded_corners.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Defina a cor de fundo da View -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Defina o border radius -->
+    <corners android:radius="20dp" />
+
+    <!-- Defina a altura e a largura do drawable -->
+    <size
+        android:width="370dp"
+        android:height="100dp" />
+
+    <!-- Adicione uma borda, se desejar -->
+</shape>

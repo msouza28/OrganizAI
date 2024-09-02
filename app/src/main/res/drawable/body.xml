@@ -1,0 +1,13 @@
+<!-- res/drawable/rounded_corners.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Defina a cor de fundo da View -->
+    <solid android:color="#609F13"/>
+
+    <!-- Defina o border radius -->
+    <corners
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="8dp" />
+
+</shape>

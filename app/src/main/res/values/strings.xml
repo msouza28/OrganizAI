@@ -12,4 +12,15 @@
     <string name="todo1">TODO</string>
     <string name="todo2">TODO</string>
     <string name="todo3">TODO</string>
+    <string name="configura_es">Configurações</string>
+    <string name="voltar">voltar</string>
+    <string name="geral">Geral</string>
+    <string name="texttema">Tema</string>
+    <string name="divisao">_________________________________________________________________</string>
+    <string name="divisoria">__________________________________________________________</string>
+    <string name="divisoria2">__________________________________________________________</string>
+    <string name="divisoria3">__________________________________________________________</string>
+    <string name="alertas_e_notifica_es">Alertas e Notificações</string>
+    <string name="seguran_a">Segurança</string>
+    <string name="geral2">Geral</string>
 </resources>

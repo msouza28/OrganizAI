@@ -17,10 +17,17 @@
     <string name="geral">Geral</string>
     <string name="texttema">Tema</string>
     <string name="divisao">_________________________________________________________________</string>
-    <string name="divisoria">__________________________________________________________</string>
+    <string name="divisoria">_______________________________________________________________</string>
     <string name="divisoria2">__________________________________________________________</string>
     <string name="divisoria3">__________________________________________________________</string>
     <string name="alertas_e_notifica_es">Alertas e Notificações</string>
     <string name="seguran_a">Segurança</string>
     <string name="geral2">Geral</string>
+    <string name="tema">Tema</string>
+    <string name="Alterar_dados">Alterar dados</string>
+    <string name="Alterar_senha">Alterar Senha</string>
+    <string name="senha_app">Definir Senha de Acesso ao App</string>
+    <string name="Alterar_email">Ativar notificações</string>
+
+
 </resources>

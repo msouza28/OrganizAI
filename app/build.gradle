@@ -40,4 +40,5 @@ dependencies {
     implementation 'com.airbnb.android:lottie:6.5.0'
     implementation 'com.github.BlacKCaT27:CurrencyEditText:2.0.2'
     implementation 'com.google.android.material:material:1.9.0'
+    
 }

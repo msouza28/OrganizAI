@@ -16,13 +16,13 @@
             android:name=".PerguntasActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
             android:name=".IntroActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".ConfiguracaoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

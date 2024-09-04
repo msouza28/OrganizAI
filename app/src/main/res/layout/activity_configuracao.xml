@@ -256,13 +256,14 @@
 
     <Switch
         android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/infoconfigalerta"
         app:layout_constraintEnd_toEndOf="@+id/infoconfigalerta"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="@+id/infoconfigalerta"
-        app:layout_constraintTop_toTopOf="@+id/infoconfigalerta" />
+        app:layout_constraintTop_toTopOf="@+id/infoconfigalerta"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

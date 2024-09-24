@@ -27,8 +27,6 @@
 
     </LinearLayout>
 
-    <!-- Descrição do gasto -->
-
     <!-- Valor do gasto -->
     <TextView
         android:id="@+id/categoria_nome_categoria"

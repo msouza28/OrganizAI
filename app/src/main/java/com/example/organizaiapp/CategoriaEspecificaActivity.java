@@ -2,6 +2,7 @@ package com.example.organizaiapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -38,7 +40,7 @@ public class CategoriaEspecificaActivity extends AppCompatActivity {
         LinearLayout linearRegistros = findViewById(R.id.linear_registros_especifica);
         List<CategoriaEspecificaCard> registros = new ArrayList<CategoriaEspecificaCard>();
         registros.add(new CategoriaEspecificaCard("Dia 10", "Compras da semana", 200.00));
-        registros.add(new CategoriaEspecificaCard("Dia 20", "Compras de fraudas", 300.00));
+        registros.add(new CategoriaEspecificaCard("Dia 20", "Compras de fraudas",300.00));
 
         for (CategoriaEspecificaCard registro : registros){
             LayoutInflater inflater = LayoutInflater.from(this);

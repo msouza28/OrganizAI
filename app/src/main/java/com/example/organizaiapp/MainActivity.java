@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -140,11 +141,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        //Implementacao de mudança de constraint entre receita e despesa
         ConstraintLayout constraintLayout = findViewById(R.id.balanco_constraint);
         View bgSelected = findViewById(R.id.bg_selected);
         TextView receitaTitulo = findViewById(R.id.txt_receita_titulo);
         TextView despesaTitulo = findViewById(R.id.txt_despesa_titulo);
 
+        //animacação da barra de receita ao clicar
         receitaTitulo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //animacação da barra de despesa ao clicar
         despesaTitulo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -179,6 +183,13 @@ public class MainActivity extends AppCompatActivity {
                 bgSelected.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         });
+
+        Button btnMeusBeneficios = findViewById(R.id.btn_meus_beneficios);
+        btnMeusBeneficios.setOnClickListener(v -> {
+            Intent i = new Intent(this, MeusBeneficiosActivity.class);
+            startActivity(i);
+        });
+
     }
 
     public int getDataSelecionada() {

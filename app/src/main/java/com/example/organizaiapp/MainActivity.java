@@ -107,31 +107,29 @@ public class MainActivity extends AppCompatActivity {
         registros.add(new CategoriaCard("Lazer", 400.0));
         registros.add(new CategoriaCard("Carro", 100.0));
 
+        if(!registros.isEmpty()){
+            txtRegistroVazio.setVisibility(View.INVISIBLE);
+            verticalScrollView.setVisibility(View.VISIBLE);
+            for (CategoriaCard registro : registros){
+                LayoutInflater inflater = LayoutInflater.from(this);
+                LinearLayout card = (LinearLayout) inflater.inflate(R.layout.categoria_card, linearRegistros, false);
 
-        txtRegistroVazio.setVisibility(View.INVISIBLE);
-        verticalScrollView.setVisibility(View.VISIBLE);
+                TextView nomeCategoria = card.findViewById(R.id.categoria_nome_categoria);
+                TextView valorGasto = card.findViewById(R.id.categoria_valor_gasto);
 
-        for (CategoriaCard registro : registros){
-            LayoutInflater inflater = LayoutInflater.from(this);
-            LinearLayout card = (LinearLayout) inflater.inflate(R.layout.categoria_card, linearRegistros, false);
+                nomeCategoria.setText(registro.getCategoria());
+                valorGasto.setText("R$ " + registro.getValor());
 
-            TextView nomeCategoria = card.findViewById(R.id.categoria_nome_categoria);
-            TextView valorGasto = card.findViewById(R.id.categoria_valor_gasto);
+                // Adicione o card ao LinearLayout
+                linearRegistros.addView(card);
 
-            nomeCategoria.setText(registro.getCategoria());
-            valorGasto.setText("R$ " + registro.getValor());
-
-
-            // Adicione o card ao LinearLayout
-            linearRegistros.addView(card);
-
-            card.setOnClickListener(v -> {
-                Intent i = new Intent(this, CategoriaEspecificaActivity.class);
-                i.putExtra("nomeCategoria", registro.getCategoria());
-                startActivity(i);
-            });
+                card.setOnClickListener(v -> {
+                    Intent i = new Intent(this, CategoriaEspecificaActivity.class);
+                    i.putExtra("nomeCategoria", registro.getCategoria());
+                    startActivity(i);
+                });
+            }
         }
-
 
 
         //------------------------------------------------------------------------------------------

@@ -1,20 +1,27 @@
 package com.example.organizaiapp;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.RequiresApi;
@@ -39,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private int dataSelecionada;
+    ImageView btnAdicionar;
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -188,6 +197,34 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         });
 
+        //Implementacao do BottomSheetDialog para adicionar Receita e Despesa
+        btnAdicionar = findViewById(R.id.btn_adicionar);
+        btnAdicionar.setOnClickListener(v -> {
+            showDialog();
+        });
+    }
+
+    private void showDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.bottomsheetadd);
+
+        LinearLayout linearReceita = dialog.findViewById(R.id.linear_receita);
+        LinearLayout linearDespesa = dialog.findViewById(R.id.linear_despesa);
+
+        linearReceita.setOnClickListener(v->{
+            Toast.makeText(MainActivity.this, "Foi para tela de receita", Toast.LENGTH_SHORT).show();
+        });
+
+        linearDespesa.setOnClickListener(v->{
+            Toast.makeText(MainActivity.this, "Foi para tela de despesa", Toast.LENGTH_SHORT).show();
+        });
+
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 
     public int getDataSelecionada() {

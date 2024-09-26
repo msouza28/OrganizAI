@@ -93,7 +93,7 @@
         <TextView
             android:id="@+id/txt_banner_beneficios"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:fontFamily="@font/saira_bold"
             android:text="A partir do seu perfil de usuário, veja quais benefícios você tem direito."

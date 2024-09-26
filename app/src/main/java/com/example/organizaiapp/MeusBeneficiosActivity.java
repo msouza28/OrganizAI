@@ -1,5 +1,6 @@
 package com.example.organizaiapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +32,6 @@ public class MeusBeneficiosActivity extends AppCompatActivity {
         registros.add(new BeneficioCard(1L, "Bolsa Família",true, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "));
         registros.add(new BeneficioCard(2L, "Pé de Meia",false, "Lorem Ipsum is simply dummy text of the printing and typesetting industry."));
 
-
         for (BeneficioCard registro : registros){
             LayoutInflater inflater = LayoutInflater.from(this);
             LinearLayout card = (LinearLayout) inflater.inflate(R.layout.beneficio_card, linearRegistros, false);
@@ -43,6 +43,13 @@ public class MeusBeneficiosActivity extends AppCompatActivity {
             nomeBeneficio.setText(registro.getNome());
             // Adicione o card ao LinearLayout
             linearRegistros.addView(card);
+
+            card.setOnClickListener(v -> {
+                Intent i = new Intent(this, BeneficioDetalheActivity.class);
+                i.putExtra("nomeBeneficio", registro.getNome());
+                i.putExtra("descBeneficio", registro.getDescricao());
+                startActivity(i);
+            });
         }
         TextView btnVoltar = findViewById(R.id.btn_voltar_beneficios);
         btnVoltar.setOnClickListener(v -> finish());

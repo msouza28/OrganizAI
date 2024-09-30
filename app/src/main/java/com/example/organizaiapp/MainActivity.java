@@ -213,7 +213,9 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout linearDespesa = dialog.findViewById(R.id.linear_despesa);
 
         linearReceita.setOnClickListener(v->{
-            Toast.makeText(MainActivity.this, "Foi para tela de receita", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this, ReceitaActivity.class);
+            startActivity(i);
+            dialog.cancel();
         });
 
         linearDespesa.setOnClickListener(v->{
@@ -225,6 +227,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.getWindow().setGravity(Gravity.BOTTOM);
+
     }
 
     public int getDataSelecionada() {
